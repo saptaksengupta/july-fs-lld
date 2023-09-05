@@ -1,4 +1,4 @@
-const fs= require("fs");
+const fs = require("fs");
 
 // console.log("before");
 
@@ -54,5 +54,3 @@ async function printSum() {
     const sumRes = await sum(5, 5); // wait until it is finished. 
     console.log(sumRes);
 }
-
-printSum();
