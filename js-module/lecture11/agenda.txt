@@ -1,0 +1,6 @@
+1. Dig deep into try, catch and finally
+2. Promise chain with few examples. 
+3. Promise, All, raise, any.
+
+
+
