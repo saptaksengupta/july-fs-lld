@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            border:1px solid green;
+            background-color: lightcoral;
+            height:10rem;
+            width:10rem;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="box"></div>
+
+    <script>
+
+        /**
+         *  ways to add event listener 
+         * 
+         *  1. inline events : for a given event you can only use it once 
+         *  2. addEventListeners : have multiple cbs for a given event 
+         * **/
+        
+        const box = document.querySelector(".box");
+
+        box.onclick = function() {
+            console.log("I am clicked!");
+        }
+
+        box.onclick = function() {
+            console.log("I am fake!");
+        }
+        
+        const cb1 = () => {
+            console.log("I am clicked from add event!")
+        }
+
+        const cb2 = () => {
+            console.log("I am clicked from add fake!")
+        }
+
+        box.addEventListener("click", cb1, {once: true}); 
+
+        box.addEventListener("click", cb2, {once: true}); 
+
+    </script>
+</body>
+</html>

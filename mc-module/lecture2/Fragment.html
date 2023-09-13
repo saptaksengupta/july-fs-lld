@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event in depth</title>
+</head>
+<body>
+
+    <!-- Fragments 
+
+        The DocumentFragment interface represents a minimal document object that has no parent.
+
+        It is used as a lightweight version of Document that stores 
+        a segment of a document structure comprised of nodes just like a standard document. 
+
+         the document fragment is in memory and not part of the main DOM tree
+
+         Changes made to the fragment don't affect the document.
+
+        <React.Fragment>
+        <React.Fragment/>
+        
+        <>
+        -
+        -
+        -
+        </>
+    
+    -->
+
+    <h1>List Item</h1>
+    <ul id="container"></ul>
+
+    <script>
+        const ul = document.getElementById("container")
+        // for (var i = 0; i < 100; i++) {
+        //     let newLi = document.createElement('li');
+        //     newLi.textContent = `Hi, I am ${i+1}`;
+        //     ul.appendChild(newLi);    
+        // }
+
+        
+
+        // Smarter way of doing this is...
+        // by using fragment
+
+
+        let fragment = document.createDocumentFragment();
+        let div = document.createElement("div");
+
+
+        console.dir(fragment);
+        console.dir(div);
+        var cache = [];
+        for (var i = 0; i < 1000; i++) {
+            let newLi = document.createElement('li');
+            newLi.textContent = `Hi, I am ${i+1}`;
+        
+            fragment.appendChild(newLi);
+        }
+
+        ul.appendChild(fragment);
+
+    </script>
+</body>
+</html>

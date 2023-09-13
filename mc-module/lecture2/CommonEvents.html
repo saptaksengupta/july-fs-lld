@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            border:1px solid green;
+            background-color: lightcoral;
+            height:10rem;
+            width:10rem;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!--
+            Different ways you can interact with a webpage
+            Mouse : hover, click . mousedown, mouseup, scroll, doubleclick
+            Keyboard  : keyup, keydown, keypress
+        -->
+      
+    <div class="box"></div>
+
+    <input type="text" id="inputTxt"/>
+    <script>
+        
+        const box = document.querySelector(".box");
+        const input = document.getElementById("inputTxt");
+
+        box.addEventListener("mouseover", () => {
+            console.log("Hover occured!");
+        });
+
+        box.addEventListener("mouseleave", () => {
+            console.log("Mouse Leave!")
+        });
+
+        box.addEventListener("mousedown", () => {
+            console.log("Mouse Down!")
+        });
+
+        box.addEventListener("mouseup", (event) => {
+            console.log(event);
+            console.log("Mouse Up!")
+        });
+
+
+        // mousedown + mouseup = click
+        box.addEventListener("click", () => {
+            console.log("Mouse Up!")
+        });
+
+
+        input.addEventListener("keydown", () => {
+            console.log(event.key);
+            console.log("keydown!");
+        });
+
+        input.addEventListener("keypress", () => {
+            console.log("keypress!");
+        });
+
+
+        
+    </script>
+</body>
+</html>
