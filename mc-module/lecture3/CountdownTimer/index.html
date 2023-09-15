@@ -1,0 +1,57 @@
+<!--
+    Interviewer : Problem Statement : Build a Count Down Timer
+
+    #Requirment
+
+    Must Have 
+    pass time in hours,minutes and seconds 
+    play and pause 
+    timer 
+    validation : if the user enters any time grater than 60 , it should move to left 
+            * edge case 
+
+
+    Good to Have: 
+    * reset button 
+
+    # Approach 
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Countdown Timer </h1>
+        <div class="time-container">
+            <div class="time">
+                <p id="hour-label">Hours </p>
+                <input id="hour" type="number" max="99" min="0" value="0">
+            </div>
+            <div class="time">
+                <p id="min-label">Minute </p>
+                <input id="minute" type="number" max="99" min="0" value="0">
+            </div>
+            <div class="time">
+                <p id="sec-label">Second </p>
+                <input id="second" type="number" max="99" min="0" value="0">
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="start" > Start </button>
+            <button id="reset" > Reset </button>
+        </div>
+    </div>
+
+    <script src="./script.js" ></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Rating</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Interviewer : Problem Statement : Build a Star Rating Component 
+
+    ##Requirements 
+    Ques: what are the features that we want in this component 
+
+
+    Must Have features
+    Ratiing from 1 to 5   
+    * when clicked -> ratings should appear 
+    * a hover effect should also be present 
+
+    Good to have features -> optimization, accessibility 
+    * put emojis instead of numbers 
+    * slider based star rating  -->
+
+
+    <!-- ## Approach 
+
+    * you have to listen to three events 
+                            click-> 
+                            give the rating 
+                            update stars upto that level 
+                            update rating count 
+                            mouseover -> 
+                            change the color upto that level to yellow
+    * edge cases
+                            mouseleave-> 
+
+                            reset to rating count : move to grey stars -->
+
+    <div class="container">
+        <h1> Star Rating Component </h1>
+        <div class="star-container">
+            <div class="star" rating="1">&#9733;</div>
+            <div class="star" rating="2">&#9733;</div>
+            <div class="star" rating="3">&#9733;</div>
+            <div class="star" rating="4">&#9733;</div>
+            <div class="star" rating="5">&#9733;</div>
+        </div>
+
+        <h2>
+            Rating Count: <span id="count">0</span>
+        </h2>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
