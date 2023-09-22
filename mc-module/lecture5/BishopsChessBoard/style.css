@@ -1,0 +1,27 @@
+.heading {
+    text-align: center;
+}
+
+.table {
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.box {
+    width: 6rem;
+    height: 6rem;
+    border: 2px solid gray;
+    text-align: center;
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: black;
+}
+
+.yellow {
+    background-color: yellow;
+}

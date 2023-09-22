@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <button id="btn">
+            Button
+        </button>
+    </div>
+
+    <script>
+
+        //Symptoms
+        // 1. Page unresposive
+        // 2. Slow browser
+        // 3. Slow OS.
+
+        // 1. Accidental Global Variable 
+
+        // Garbage collection
+
+        // window.a = 10;
+
+        // console.log(a);
+
+        // function square(a) {
+        //     console.log(a * a);
+        // }
+
+        // square(4);
+        // this square func will be removed from 
+        // execution context.
+
+        // 2. timer which is not removed
+        // var timer = setTimeout(function() {
+
+        // }, 1000);
+        // clearTimeout(timer);
+        // also for setInterval
+        
+
+        // 3. unecessary declare/use of clouser
+
+
+        // 4. Dom non clearance 
+        // const nodes = {
+        //     btn: document.getElementById('btn')
+        // }
+
+        // document.getElementById('btn').remove();
+        // even if I remove it like this 
+        // console.log(nodes.btn);
+
+
+        // To remove this from JS heap 
+        // delete nodes['btn'];
+        // nodes = null; 
+        // console.log(nodes.btn);
+
+
+        // Garbage collection -- workflow
+        // 1. Garbage collector use a special algo 
+        // called `mark-and-swipe`.
+        // 2.mark every child as active or inactive.
+        // 3. Delete all innactive references from the memory.
+
+
+        // var a = new Array(1000);
+
+    </script>
+</body>
+
+</html>
