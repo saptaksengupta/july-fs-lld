@@ -1,0 +1,83 @@
+<!-- Kanban Board 
+-  Create and Update a Task 
+- Lock and Unlock task 
+- Colors - set/update the task to a different color bucket 
+- Delete 
+- filter  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kanban Board</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="page-container">
+
+        <div class="toolbox">
+            <div class="toolbox-priority">
+                <div class="color pink"></div>
+                <div class="color blue"></div>
+                <div class="color purple"></div>
+                <div class="color green"></div>
+            </div>
+            <div class="action-btn">
+                <div class="add-btn">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="remove-btn">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="heading-cont">
+                <h2 class="heading-pending">Pending</h2>
+                <h2 class="heading-finished">Finished</h2>
+            </div>
+            <div class="container-wrapper">
+                <div class="pending-cont container">
+                    <!-- <div class="ticket-cont">
+                        <div class="ticket-color green"></div>
+                        <div class="ticket-id"> 12312</div>
+                        <div class="ticket-area"> Some content</div>
+                        <div class="lock-unlock">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="finsished-cont container"></div>
+            </div>
+        </div>
+
+        <div class="modal-cont">
+            <textarea placeholder="Enter your task" class="textarea-cont"> </textarea>
+            <div class="priority-color-cont">
+                <div class="modal-close">
+                    <i class="fa-solid fa-close" style="color: white;"></i>
+                </div>
+                <div class="priority-color pink"></div>
+                <div class="priority-color blue"></div>
+                <div class="priority-color purple"></div>
+                <div class="priority-color green"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src=" https://cdn.jsdelivr.net/npm/short-unique-id@5.0.2/dist/short-unique-id.min.js "></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
