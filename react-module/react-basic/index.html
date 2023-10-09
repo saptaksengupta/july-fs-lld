@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- algorithm to efficiently manipulates dom.  -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+
+    <!-- React DOM  -> uses react to update the DOM-->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- transpiler -> JSX -> into javascript -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+
+<body>
+
+    <div>
+        <h1>Home Page</h1>
+        <div id="root">
+        </div>
+        <div id="root1">
+        </div>
+        <div id="root2">
+        </div>
+    </div>
+    <script type="text/babel">
+
+
+        function Greeting(props) {
+            const {name, age} = props;
+            return (
+                <div>
+                    <div>Hi, I am {name}</div>
+                    <div>My, age {age}</div>
+                </div>
+            ); // JSX -> Javascript and XML
+        }
+
+        ReactDOM.render(<Greeting name="Foo" age="20" />, document.getElementById("root"));
+        ReactDOM.render(<Greeting name="Bar" age="30"/>, document.getElementById("root1"));
+        ReactDOM.render(<Greeting name="Rohan" age="40"/>, document.getElementById("root2"));
+        
+
+    </script>
+</body>
+
+</html>
