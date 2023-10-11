@@ -41,6 +41,19 @@ const VideoPlayer = ({ src, shouldPlay }) => {
         // It will execute only once after first render. 
     }, []);
 
+    // useEffect(() => {
+
+    //     chatConnection.connect();
+        
+    //     // wrtite 
+
+    //     return () => {
+    //         // garbage collection code
+    //         chatConnection.disconnect();
+    //     }
+
+    // }, []);
+
 
     return <video ref={videoRef} height={200} width={200} src={src} loop playsInline />
 }

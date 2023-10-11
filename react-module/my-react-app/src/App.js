@@ -7,6 +7,8 @@ import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import HomePage from './Pages/Home';
 import AboutUs from './Pages/AboutUs';
 import Login from './Pages/Login';
+import { useEffect } from 'react';
+import UserDetails from './Pages/UserDetails';
 
 const ErrorElement = () =>{
   return (
@@ -33,6 +35,7 @@ function App() {
           <Route path='/' element={<HomePage/>}></Route>
           <Route path='/about-us' element={<AboutUs/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
+          <Route path='/users/:userId' element={ <UserDetails/> }></Route>
           <Route path='*' element={<ErrorElement/>}> </Route>
         </Routes>
       </Router>
