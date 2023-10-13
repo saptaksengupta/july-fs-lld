@@ -15,7 +15,7 @@ export default function SearchBox({onUserSearched}) {
     <Box
       component="form"
       sx={{
-        '& > :not(style)': { m: 1, width: '30ch' },
+        '& > :not(style)': { width: '50ch' },
       }}
       noValidate
       autoComplete="off"
