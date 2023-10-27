@@ -5,7 +5,6 @@ import "../styles/style.css";
 import ThemedButton from './Button';
 
 const Navbar = () => {  
-
     const theme = useContext(ThemeContext);
     const darkMode = theme.state.darkMode;
     const changeTheme = () => {
